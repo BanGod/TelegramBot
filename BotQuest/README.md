@@ -1,0 +1,19 @@
+Bot's Architecture
+<ul>
+    <li>
+        <strong>config.py</strong>
+        <ol></ol>
+    </li>
+    <li>
+        <strong>bot.py</strong>
+        <ol></ol>
+    </li>
+    <li>
+        <strong>utils.py</strong>
+        <ol></ol>
+    </li>
+    <li>
+        <strong>models.py</strong>
+        <ol></ol>
+    </li>
+</ul>
