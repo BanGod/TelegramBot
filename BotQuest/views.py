@@ -12,6 +12,4 @@ def signup(username):
 
 def get_points():
     query = Point.select()
-    for pet in query:
-        print(pet.score, pet.right_answer)
-    return Point.select()
+    return query
