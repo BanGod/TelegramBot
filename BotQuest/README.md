@@ -1,4 +1,4 @@
-Bot's Architecture
+<h2>Bot's Architecture</h2>
 <ul>
     <li>
         <strong>config.py</strong>
