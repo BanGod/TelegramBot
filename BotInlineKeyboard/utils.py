@@ -5,7 +5,7 @@ def generate_markup(options):
 
     i = 0
     for item in options:
-        markup.add(types.InlineKeyboardButton(item, callback_data=str(i)))
+        markup.add(types.InlineKeyboardButton(item, callback_data=("1_" + str(i))))
         i += 1  
 
     return markup

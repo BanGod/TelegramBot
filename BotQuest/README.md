@@ -1,4 +1,4 @@
-<h2>Bot's Architecture</h2>
+<!-- <h2>Bot's Architecture</h2>
 <ul>
     <li>
         <strong>config.py</strong>
@@ -17,7 +17,7 @@
     <li>
         <strong>utils.py</strong>
         <ul>
-            <li>def generate_markup(options): <i>returns qustion and inline-keyboard with answers</i></li>
+            <li>def generate_markup(options, number): <i>returns qustion and inline-keyboard with answers</i></li>
             <li>def reg_new_user(username): <i>calls <strong>signup(username)</strong> from views.py when /signup command comes</i></li>
             <li>def start_game(): <i>calls <strong>get_points()</strong> from views.py when /game command comes;
                             creates and sends first question</i></li>
@@ -43,4 +43,4 @@
             <li>def get_points(): <i>returns all data from Points to use it once game started</i></li>
         </ul>
     </li>
-</ul>
+</ul> -->
