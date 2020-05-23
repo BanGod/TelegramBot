@@ -8,10 +8,16 @@ def create_tables():
     database.close()
 
 def signup(username):
-    if config.is_logged_in == False:
-        config.username = username[8:] if len(username) > 8 else "User_" + str(User.select().count())
-        User.create(username=config.username, join_date=date.today(), score = 0)
-        config.is_logged_in = True
+    config.username = username[8:] if len(username) > 8 else "User_" + str(User.select().count())
+    User.create(username=config.username, join_date=date.today(), score = 0)
+    config.is_logged_in = True
+
+def rename(username):
+    new_username = username[8:] if len(username) > 8 else config.username
+    if (new_username != config.username):
+        (User.update({User.username: new_username}).where(User.username==config.username)).execute()
+        config.username = new_username
+
 
 def get_points():
     query = Point.select()

@@ -40,10 +40,25 @@ def process_callback(query):
 
 @bot.message_handler(commands=["signup"])
 def signup(message):
-    try:
-        views.signup(message.text)
-    except:
-        bot.send_message(message.chat.id, text="Not unique name. /signup again")
+    if not config.is_logged_in:
+        try:
+            views.signup(message.text)
+        except:
+            bot.send_message(message.chat.id, text="Not unique name. /signup again")
+    else:
+        bot.send_message(message.chat.id, text="To change username use /rename")
+    bot.send_message(message.chat.id, text="Your username: " + config.username)
+
+
+@bot.message_handler(commands=["rename"])
+def change_username(message):
+    if config.is_logged_in:
+        try:
+            views.rename(message.text)
+        except:
+            bot.send_message(message.chat.id, text="Not unique name.")
+    else:
+        bot.send_message(message.chat.id, text="You need to /signup first")
     bot.send_message(message.chat.id, text="Your username: " + config.username)
 
 @bot.message_handler(commands=["game"])
